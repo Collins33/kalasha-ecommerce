@@ -3,13 +3,14 @@ import './menuItem.scss';
 
 const menuItems =({sections})=>{
   const displayMenuItems = sections.map(({title, imageUrl, id, size})=>(
-    <div style={
+    <div className={`${size} menu-item`}>
+      <div className="background-image" style={
       {
         backgroundImage: `url(${imageUrl})`
       }
-    } className={`${size} menu-item`}>
+    }/>
       <div className='content' key={id}>
-      <div className='title'>{title}</div>
+      <div className='title'>{title.toUpperCase()}</div>
       <span className='subtitle'>SHOP NOW</span>
     </div>
     </div>
